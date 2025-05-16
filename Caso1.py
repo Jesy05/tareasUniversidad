@@ -18,10 +18,10 @@ import os
 
 def RegistroSemanal():
     os.system("cls")
-    print("📋 Registro Semanal de Gastos")
+    print("📋 Registro Mensual de Gastos Por Semana")
     total_acumulado = 0
     for semanas in range(1, 5): # 4 semanas
-        print(f"\nSemanas {semanas}")
+        print(f"\nSemana {semanas}")
         total_semana = 0
         for dia in range(1, 8): # 7 días
             gasto = float(input(f"Digite el gasto del día {dia}: ")) # {dia} es un número del 1 al 7 las {} son para concatenar
