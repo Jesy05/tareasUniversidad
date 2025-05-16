@@ -1,5 +1,5 @@
 '''
-Autor: fulano 
+Autor: Jesy Nicole González Jarquín
 Fecha: 16/05/2025
 Versión: 1.0 
 Descripción: Este programa 
