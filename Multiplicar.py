@@ -13,7 +13,7 @@ def multiplicar():
     n= int(input("Digite el número de tablas de multiplicar que quiere: "))
     m= int(input("Digite el número hasta el cual quiere multiplicar las tablas: "))
     print(" ")
-    for i in range(1, n+1): # si le pusiera 2 al final las tablas irian multiplicando de dos en dos
+    for i in range(1, n+1): # si le pusiera 2 al final las tablas irian multiplicando de dos en dos, por defecto incrementa en uno
         print("La tabla de multiplicar del número", i, "hasta el", m,"es:")
         for j in range(1, m+1): # el 1 es el primer número a multiplicar y el m es el último número a multiplicar
             # + 1 porque el rango no incluye el último número
