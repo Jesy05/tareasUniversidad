@@ -1,0 +1,1 @@
+#Para poner alguna función que quieran importar en otros modulos
