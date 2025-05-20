@@ -1,7 +1,7 @@
 '''
 Autores: Jesy Nicole González Jarquín
-         Marian 
-         Nora
+         Marian Alejandra Guillén Castillo
+         Nora Maria Obregón Membreño
 Fecha: 20/05/2025
 Versión: (Versionado por github)
 
