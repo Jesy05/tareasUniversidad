@@ -1,7 +1,7 @@
 '''
 Autores: Jesy Nicole González Jarquín
-         Marian 
-         Nora
+         Marian Alejandra Guillén Castillo
+         Nora Maria Obregón Membreño
 Fecha: 20/05/2025
 Versión: (Versionado por github)
 
@@ -61,18 +61,23 @@ def ControlVentasKioscos():
     respuesta = input().strip().lower() # la entrada la pedimos con el strip para quitar espacios
     # y lower para que no importe si lo escriben en mayúscula o minúscula
 
-    if respuesta == "s":
-        print("\n🧾 Resumen de ventas por kiosco y producto:")
-        for dia in dias:
-            print(f"\n📅 {dia}") 
-            total_dia = 0
-            for kiosco in kioscos:
-                print(f"\n{kiosco}")
-                for producto in productos:
-                    cantidad = ventas[dia][kiosco][producto]
-                    print(f"  - {producto}: {cantidad} unidades vendidas")
-                    total_dia += cantidad
-            print(f"\n📦 Total general vendido en {dia}: {total_dia} unidades")
+    while True:
+        if respuesta == "s":
+            print("\n🧾 Resumen de ventas por kiosco y producto:")
+            for dia in dias:
+                print(f"\n📅 {dia}")
+                total_dia = 0
+                for kiosco in kioscos:
+                    print(f"\n{kiosco}")
+                    for producto in productos:
+                        cantidad = ventas[dia][kiosco][producto]
+                        print(f"  - {producto}: {cantidad} unidades vendidas")
+                        total_dia += cantidad
+                print(f"\n📦 Total general vendido en {dia}: {total_dia} unidades")
+                break
+            else:
+                print("\n❌ Respuesta no válida. Por favor, ingrese 's' o 'n'.")
+                respuesta = input("¿Quiere ver el resumen de ventas? (s/n): ").strip().lower()
 
 if __name__ == "__main__":
     ControlVentasKioscos()
