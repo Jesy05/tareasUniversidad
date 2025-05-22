@@ -74,10 +74,11 @@ def ControlVentasKioscos():
                         print(f"  - {producto}: {cantidad} unidades vendidas")
                         total_dia += cantidad
                 print(f"\n📦 Total general vendido en {dia}: {total_dia} unidades")
-                break
-            else:
-                print("\n❌ Respuesta no válida. Por favor, ingrese 's' o 'n'.")
-                respuesta = input("¿Quiere ver el resumen de ventas? (s/n): ").strip().lower()
+            break
+        elif respuesta == "n":
+            print("\n❌ Respuesta no válida. Por favor, ingrese 's' o 'n'.")
+            respuesta = input("¿Quiere ver el resumen de ventas? (s/n): ").strip().lower()
+            break
 
 if __name__ == "__main__":
     ControlVentasKioscos()
