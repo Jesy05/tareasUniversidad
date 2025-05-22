@@ -5,7 +5,7 @@
 //diferentes y se registrarán las ventas durante cuatro días. El programa debe calcular y mostrar el total vendido por producto en cada
 //kiosco, así como el total general por día.
 	Algoritmo ControlVentasKioscos
-		
+		//Definimos variables y dimesionamos
 		Definir ventas Como Entero
 		Definir nombresKiosco Como Cadena
 		Definir nombresProducto Como Cadena
@@ -16,7 +16,7 @@
 		Dimension nombresKiosco[3]
 		Dimension nombresProducto[5]
 		
-		
+		//Indicamos que i es = 3 ( Dias) j es = 2 (kiosco) k = (Productos)
 		Para i = 0 Hasta 3 Hacer
 			
 			Para j = 0 Hasta 2 Hacer
@@ -27,7 +27,7 @@
 				FinPara
 			FinPara
 		FinPara
-		
+		//Agregamos nombres para los llamados
 		nombresKiosco[0] = "Kiosco 1"
 		nombresKiosco[1] = "Kiosco 2"
 		nombresKiosco[2] = "Kiosco 3"
@@ -44,7 +44,7 @@
 		Escribir "   productos vendidos por kiosco, categoría y día)"
 		Escribir "...................................................."
 		
-		
+		//Bucle para repetir los 4 dias y sumar los productos
 		Para i = 0 Hasta 3 Hacer
 			
 			
@@ -76,6 +76,7 @@
 		Si Minusculas(respuesta) = "s" Entonces
 			
 			Escribir "## Resumen de ventas por kiosco y producto:"
+			// Bucle para ver los 4 dias y su resumen de venta 
 			Para i <- 0 Hasta 3 Hacer
 				
 				
