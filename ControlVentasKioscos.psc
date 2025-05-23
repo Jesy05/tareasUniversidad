@@ -51,7 +51,7 @@
 		//Bucle para repetir los 4 dias y sumar todos los productos
 		Para i = 0 Hasta 3 Hacer //Bucle principal: 4 días (índices 0, 1, 2, 3)
 			
-			
+			Escribir "                                        "
 			Escribir "<<<<<<<<<<<<<< Día ", i+1, ">>>>>>>>>>>>" // La suma de 1 es para comenzar desde 1 y no de 0.
 			Para j = 0 Hasta 2 Hacer //Segundo bucle: 3 kioscos
 				
@@ -62,7 +62,7 @@
 					
 					Escribir "  - ", nombresProducto[k] //Muestra el nombre del producto actual que se está registrando.
 					Repetir
-						Escribir "                                                        "
+						
                                                 Escribir "Digite la cantidad vendida de ", nombresProducto[k], ": "
 						Leer cantidad
 						Si cantidad < 0 Entonces
