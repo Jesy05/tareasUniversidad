@@ -12,8 +12,7 @@
 		Definir i, j, k, cantidad, total_dia Como Entero //i, j, k: contadores para los bucles (día, kiosco, producto).
                 //cantidad: valor ingresado por el usuario.
                 //total_dia: se usa para acumular las ventas del día.
-
-		Definir respuesta Como Cadena
+                Definir respuesta Como Cadena
 		
 		Dimension ventas[4,3,5] //4 días, 3 kioscos, 5 productos 
 		Dimension nombresKiosco[3] //Para los nombres de los kioskos
@@ -26,7 +25,7 @@
 				
 				Para k = 0 Hasta 4 Hacer //Usamos indice de el 0 al 4 (Total: 5 valores)
 					
-					ventas[i,j,k] = 0 //para asegurarnos que se borre cualquier valor anterior y empezar desde 0
+					ventas[i,j,k] = 0 //Lo igualamos a 0 para asegurarnos que se borre cualquier valor anterior y empezar desde 0
 				FinPara
 			FinPara
 		FinPara
@@ -41,23 +40,24 @@
 		nombresProducto[2] = "Snacks"
 		nombresProducto[3] = "Galletas"
 		nombresProducto[4] = "Frutas"
-		
+
+		//Presentar al usuario lo que hace el programa, para que sepa qué esperar.
 		Escribir "$$ Control de Ventas en Kioscos Estudiantiles UAM $$"
 		Escribir "...................................................."
 		Escribir "  (En este programa puede ingresar la cantidad de"
 		Escribir "   productos vendidos por kiosco, categoría y día)"
 		Escribir "...................................................."
 		
-		//Bucle para repetir los 4 dias y sumar los productos
+		//Bucle para repetir los 4 dias y sumar todos los productos
 		Para i = 0 Hasta 3 Hacer //Bucle principal: 4 días (índices 0, 1, 2, 3)
 			
 			
-			Escribir "Día ", i+1
+			Escribir "<<<<<<<<<<<<<< Día ", i+1, ">>>>>>>>>>>>" // La suma de 1 es para comenzar desde 1 y no de 0.
 			Para j = 0 Hasta 2 Hacer //Segundo bucle: 3 kioscos
 				
 				
-				Escribir nombresKiosco[j]
-				Escribir "Productos disponibles:"
+				Escribir "--------------" ,nombresKiosco[j], "--------------"
+				Escribir ">>", "Productos disponibles:"
 				Para k = 0 Hasta 4 Hacer //Tercer bucle: 5 productos
 					
 					Escribir "  - ", nombresProducto[k] //Muestra el nombre del producto actual que se está registrando.
@@ -75,30 +75,34 @@
 		FinPara
 		
 	
-		Escribir "¿Quiere ver el resumen de ventas? (s/n):"
-		Leer respuesta
+		Escribir "¿Quiere ver el resumen de ventas? (s/n):" //Preguntar si el usuario quiere el resumens dónde la respuesta "s" es si y "n" es no.
+		Leer respuesta //Espera que el usuario escriba s o n, lo que el usuario escriba se guarda en la variable "respuesta".
 		
-		Si Minusculas(respuesta) = "s" Entonces
+		Si Minusculas(respuesta) = "s" Entonces //Se compara en minúsculas para evitar errores si el usuario pone “S” mayúscula.
 			
 			Escribir "## Resumen de ventas por kiosco y producto:"
+
 			// Bucle para ver los 4 dias y su resumen de venta 
-			Para i <- 0 Hasta 3 Hacer
+				Para i = 0 Hasta 3 Hacer //Hacer desde el 0 hasta el 3 (días)
 				
-				
-				Escribir "## Día ", i+1
-				total_dia = 0
+				Escribir "************** Día ", i+1, "**************"
+				total_dia = 0 // Inicializa la suma total de productos vendidos ese día.
 				Para j = 0 Hasta 2 Hacer
 					
 					
-					Escribir nombresKiosco[j]
-					Para k <- 0 Hasta 4 Hacer
+					Escribir "--------------", nombresKiosco[j] , "--------------" //Muestra el nombre del kiosco actual.
+					Para k = 0 Hasta 4 Hacer
 						
-						Escribir "  - ", nombresProducto[k], ": ", ventas[i,j,k], " unidades vendidas"
-						total_dia = total_dia + ventas[i,j,k]
+						Escribir "  -  ", nombresProducto[k], ": ", ventas[i,j,k], " unidades vendidas" //Mostrar en pantalla el nombre del 
+                                                //producto y la cantidad vendida ese día (i), en ese kiosco (j), de ese producto (k).
+						total_dia = total_dia + ventas[i,j,k] //"total_dia" va acumulando todas las ventas de todos los productos
+                                                //y kioscos de ese día.
 					FinPara
 				FinPara
-				
-				Escribir "## Total general vendido en Día ", i+1, ": ", total_dia, " unidades"
-			FinPara
+
+
+				Escribir "######## Total general vendido en el Día ", i+1, ": ", total_dia, " unidades"," ########" //Al final del día, muestra 
+                                //cuántos productos se vendieron en total entre todos los kioscos.
+ 			FinPara
 		FinSi
 FinAlgoritmo
