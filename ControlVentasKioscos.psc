@@ -88,7 +88,8 @@
 
 			// Bucle para ver los 4 dias y su resumen de venta 
 				Para i = 0 Hasta 3 Hacer //Hacer desde el 0 hasta el 3 (días)
-
+                          
+                                Escribir "##########################################"
                                 Escribir "                                          "
 				Escribir "************** Día ", i+1, "**************"
 				total_dia = 0 // Inicializa la suma total de productos vendidos ese día.
@@ -106,9 +107,10 @@
 				FinPara
 
                                 Escribir "                                                            "
-                                Escribir "--------------------------------------------------------------------------------"
+                                Escribir "--------------------------------------------------------------"
 				Escribir "#### Total general vendido en el Día ", i+1, ": ", total_dia, " unidades"," ####" //Al final del día, muestra 
                                 //cuántos productos se vendieron en total entre todos los kioscos.
+                                Escribir "--------------------------------------------------------------"
  			FinPara
 		FinSi
 FinAlgoritmo
