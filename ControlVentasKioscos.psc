@@ -68,7 +68,7 @@
 							Escribir "Por favor, ingrese un número entero válido (no negativo)." //valida que el usuario no ingrese 
                                                         //números negativos.
 						FinSi
-					Hasta Que cantidad >= 0 //Hata que el usuario registre un número   mayor o igual que 0 
+					Hasta Que cantidad >= 0 //Hata que el usuario registre un número mayor o igual que 0 
 					ventas[i,j,k] <- ventas[i,j,k] + cantidad
 				FinPara
 			FinPara
