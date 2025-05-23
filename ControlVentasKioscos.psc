@@ -62,7 +62,8 @@
 					
 					Escribir "  - ", nombresProducto[k] //Muestra el nombre del producto actual que se está registrando.
 					Repetir
-						Escribir "Digite la cantidad vendida de ", nombresProducto[k], ": "
+						Escribir "                                                        "
+                                                Escribir "Digite la cantidad vendida de ", nombresProducto[k], ": "
 						Leer cantidad
 						Si cantidad < 0 Entonces
 							Escribir "Por favor, ingrese un número entero válido (no negativo)." //valida que el usuario no ingrese 
@@ -79,17 +80,21 @@
 		Leer respuesta //Espera que el usuario escriba s o n, lo que el usuario escriba se guarda en la variable "respuesta".
 		
 		Si Minusculas(respuesta) = "s" Entonces //Se compara en minúsculas para evitar errores si el usuario pone “S” mayúscula.
-			
-			Escribir "## Resumen de ventas por kiosco y producto:"
+
+                        Limpiar Pantalla
+                        Escribir "---------------------------------------------------"
+			Escribir "### Resumen de ventas por kiosco y producto:"," ###"
+                        Escribir "                                                   "
 
 			// Bucle para ver los 4 dias y su resumen de venta 
 				Para i = 0 Hasta 3 Hacer //Hacer desde el 0 hasta el 3 (días)
-				
+
+                                Escribir "                                          "
 				Escribir "************** Día ", i+1, "**************"
 				total_dia = 0 // Inicializa la suma total de productos vendidos ese día.
 				Para j = 0 Hasta 2 Hacer
 					
-					
+					Escribir "                                                   "
 					Escribir "--------------", nombresKiosco[j] , "--------------" //Muestra el nombre del kiosco actual.
 					Para k = 0 Hasta 4 Hacer
 						
@@ -100,8 +105,9 @@
 					FinPara
 				FinPara
 
-
-				Escribir "######## Total general vendido en el Día ", i+1, ": ", total_dia, " unidades"," ########" //Al final del día, muestra 
+                                Escribir "                                                            "
+                                Escribir "--------------------------------------------------------------------------------"
+				Escribir "#### Total general vendido en el Día ", i+1, ": ", total_dia, " unidades"," ####" //Al final del día, muestra 
                                 //cuántos productos se vendieron en total entre todos los kioscos.
  			FinPara
 		FinSi
