@@ -12,7 +12,7 @@ Se registran los gastos diarios durante 4 semanas (7 días cada una). Al final s
 gastado por semana y el acumulado del mes.
 '''
 
-import os
+import os #Para limpiar la Pantalla
 
 
 def registroGastosEstudiante():
