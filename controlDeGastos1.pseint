@@ -2,7 +2,7 @@ Algoritmo controlDeGastos
 		Definir estudiante Como Cadena
 		Definir semana, dia Como Entero
 		Definir gastoDia, totalSemana, totalMes Como Real
-		
+		Escribir "#######CONTROL DE GASTOS######"
 		Escribir "Ingrese el nombre del estudiante:"
 		Leer estudiante
 		
@@ -14,7 +14,7 @@ Algoritmo controlDeGastos
 			
 			Para dia <- 1 Hasta 7 Con Paso 1 hacer
 				Repetir
-					Escribir "  Día ", dia, " - Ingrese el gasto: "
+					Escribir "  DÃ­a ", dia, " - Ingrese el gasto: "
 					Leer gastoDia
 				Hasta Que gastoDia >= 0
 				
