@@ -1,0 +1,41 @@
+// Autores: Jesy Nicole González Jarquín
+//          Marian Alejandra Guillén Castillo
+//          Nora Maria Obregón Membreño
+// Fecha: 20/05/2025
+// Versión: (Versionado por github)
+
+// Descripción: Este programa permite registrar los gastos diarios de un estudiante
+// durante 4 semanas (7 días cada una), calculando el total semanal y mensual.
+
+Proceso registroGastosEstudiante
+	Definir nombre Como Cadena
+	Definir semana, dia Como Entero
+	Definir gastoDiario, gastoSemanal, gastoMensual Como Real
+	
+	Escribir "Ingrese el nombre del estudiante:"
+	Leer nombre
+	
+	gastoMensual <- 0
+	
+	Para semana <- 1 Hasta 4 Con Paso 1 Hacer
+		Escribir "Semana ", semana
+		gastoSemanal <- 0
+		
+		Para dia <- 1 Hasta 7 Con Paso 1 Hacer 
+			Repetir
+				Escribir "Ingrese el gasto del día ", dia, ":"
+				Leer gastoDiario
+				Si gastoDiario < 0 Entonces
+					Escribir " El gasto no puede ser negativo. Intente de nuevo."
+				FinSi
+			Hasta Que gastoDiario >= 0
+			gastoSemanal <- gastoSemanal + gastoDiario
+		FinPara
+		
+		Escribir "Total de la semana ", semana, ": ", gastoSemanal
+		gastoMensual <- gastoMensual + gastoSemanal
+	FinPara
+	
+	Escribir " Estudiante: ", nombre
+	Escribir " Gasto total del mes: ", gastoMensual
+FinProceso
