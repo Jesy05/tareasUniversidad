@@ -17,7 +17,7 @@
 		Dimension ventas[4,3,5] //4 días, 3 kioscos, 5 productos 
 		Dimension nombresKiosco[3] //Para los nombres de los kioskos
 		Dimension nombresProducto[5] //para los nombres de los productos
-		
+		escribir "Control de Ventas en Kioscos Estudiantiles UAM"
 		//Indicamos que i es = 3 ( Dias) j es = 2 (kiosco) k = (Productos)
 		Para i = 0 Hasta 3 Hacer //Usamos indices de el 0 al 3 (Total: 4 valores)
 			
