@@ -6,7 +6,7 @@ def password():
     os.system('cls') #lll
     password = "contra123"
     intentos = 3 #tralala
-    while intentos > 0:
+    while intentos > 0:# comentario
         entrada = input("Introduce la contraseña: ")
         if entrada == password:
             print("Contraseña correcta.")
