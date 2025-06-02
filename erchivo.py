@@ -3,7 +3,7 @@
 import os
 
 def password():
-    os.system('cls') 
+    os.system('cls') #lll
     password = "contra123"
     intentos = 3 #tralala
     while intentos > 0:
