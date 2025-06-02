@@ -1,0 +1,44 @@
+Algoritmo PromedioAcademico
+		Definir estudiante Como Cadena
+		Definir numEstudiantes, i, j, k Como Entero
+		Definir nota Como Real
+		Definir sumaNotas, promedioAsignatura, promedioGeneral Como Real
+		
+		Escribir "Ingrese el número de estudiantes:"
+		Leer numEstudiantes
+		
+		Para i <- 1 Hasta numEstudiantes Con Paso 1 hacer
+			Escribir "Ingrese el nombre del estudiante ", i, ":"
+			Leer estudiante
+			
+			promedioGeneral <- 0
+			
+			Para j <- 1 Hasta 3 Con Paso 1 hacer
+				sumaNotas <- 0
+				Escribir "  Asignatura ", j
+				
+				Para k <- 1 Hasta 3 Con Paso 1 hacer
+					Repetir
+						Escribir "    Ingrese nota de tarea ", k, ":"
+						Leer nota
+					Hasta Que nota >= 0 Y nota <= 10
+					sumaNotas <- sumaNotas + nota
+				FinPara
+				
+				Repetir
+					Escribir "    Ingrese nota del examen:"
+					Leer nota
+				Hasta Que nota >= 0 Y nota <= 10
+				
+				sumaNotas <- sumaNotas + nota
+				promedioAsignatura <- sumaNotas / 4
+				promedioGeneral <- promedioGeneral + promedioAsignatura
+				
+				Escribir "    Promedio de la asignatura ", j, ": ", promedioAsignatura
+			FinPara
+			
+			promedioGeneral <- promedioGeneral / 3
+			Escribir "Promedio general de ", estudiante, ": ", promedioGeneral
+		FinPara
+		
+FinAlgoritmo
