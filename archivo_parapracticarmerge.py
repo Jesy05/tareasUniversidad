@@ -3,6 +3,7 @@
 import os
 
 def password():
+    print("Hola Mundo")
     os.system('cls') 
     password = "contra123"
     intentos = 3 #tralala
